@@ -976,5 +976,290 @@ class HomePage extends StatelessWidget {
         ),
       ),
     );
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(const KiliKiliApp());
+}
+
+class KiliKiliApp extends StatelessWidget {
+  const KiliKiliApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: 'KiliKili',
+      theme: ThemeData(
+        useMaterial3: true,
+        scaffoldBackgroundColor: Colors.white,
+      ),
+      home: const LoginPage(),
+    );
+  }
+}
+
+class KiliKiliLogo extends StatelessWidget {
+  final double size;
+
+  const KiliKiliLogo({
+    super.key,
+    this.size = 120,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        Container(
+          width: size,
+          height: size,
+          decoration: BoxDecoration(
+            color: Colors.white,
+            borderRadius: BorderRadius.circular(size * 0.25),
+            boxShadow: [
+              BoxShadow(
+                blurRadius: 20,
+                spreadRadius: 2,
+                color: Colors.black.withOpacity(0.10),
+              ),
+            ],
+          ),
+          child: Center(
+            child: ShaderMask(
+              shaderCallback: (rect) {
+                return const LinearGradient(
+                  colors: [
+                    Color(0xFF7B1FA2),
+                    Color(0xFFE91E63),
+                    Color(0xFFFF5722),
+                    Color(0xFFFFC107),
+                  ],
+                ).createShader(rect);
+              },
+              child: const Icon(
+                Icons.camera_alt_rounded,
+                size: 65,
+                color: Colors.white,
+              ),
+            ),
+          ),
+        ),
+
+        const SizedBox(height: 14),
+
+        ShaderMask(
+          shaderCallback: (rect) {
+            return const LinearGradient(
+              colors: [
+                Color(0xFF7B1FA2),
+                Color(0xFFE91E63),
+                Color(0xFFFF5722),
+              ],
+            ).createShader(rect);
+          },
+          child: const Text(
+            'KiliKili',
+            style: TextStyle(
+              color: Colors.white,
+              fontSize: 32,
+              fontWeight: FontWeight.bold,
+              letterSpacing: 1,
+            ),
+          ),
+        ),
+      ],
+    );
+  }
+}
+
+class LoginPage extends StatelessWidget {
+  const LoginPage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: SafeArea(
+        child: Center(
+          child: SingleChildScrollView(
+            padding: const EdgeInsets.all(25),
+            child: Column(
+              children: [
+                const SizedBox(height: 50),
+
+                const KiliKiliLogo(
+                  size: 130,
+                ),
+
+                const SizedBox(height: 50),
+
+                TextField(
+                  decoration: InputDecoration(
+                    hintText: 'Email or Username',
+                    prefixIcon: const Icon(Icons.person_outline),
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(12),
+                    ),
+                  ),
+                ),
+
+                const SizedBox(height: 15),
+
+                TextField(
+                  obscureText: true,
+                  decoration: InputDecoration(
+                    hintText: 'Password',
+                    prefixIcon: const Icon(Icons.lock_outline),
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(12),
+                    ),
+                  ),
+                ),
+
+                const
+
+
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(const KiliKiliApp());
+}
+
+class KiliKiliApp extends StatelessWidget {
+  const KiliKiliApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: 'KiliKili',
+      theme: ThemeData(
+        useMaterial3: true,
+        scaffoldBackgroundColor: Colors.white,
+      ),
+      home: const LoginPage(),
+    );
+  }
+}
+
+class KiliKiliLogo extends StatelessWidget {
+  final double size;
+
+  const KiliKiliLogo({
+    super.key,
+    this.size = 120,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        Container(
+          width: size,
+          height: size,
+          decoration: BoxDecoration(
+            color: Colors.white,
+            borderRadius: BorderRadius.circular(size * 0.25),
+            boxShadow: [
+              BoxShadow(
+                blurRadius: 20,
+                spreadRadius: 2,
+                color: Colors.black.withOpacity(0.10),
+              ),
+            ],
+          ),
+          child: Center(
+            child: ShaderMask(
+              shaderCallback: (rect) {
+                return const LinearGradient(
+                  colors: [
+                    Color(0xFF7B1FA2),
+                    Color(0xFFE91E63),
+                    Color(0xFFFF5722),
+                    Color(0xFFFFC107),
+                  ],
+                ).createShader(rect);
+              },
+              child: const Icon(
+                Icons.camera_alt_rounded,
+                size: 65,
+                color: Colors.white,
+              ),
+            ),
+          ),
+        ),
+
+        const SizedBox(height: 14),
+
+        ShaderMask(
+          shaderCallback: (rect) {
+            return const LinearGradient(
+              colors: [
+                Color(0xFF7B1FA2),
+                Color(0xFFE91E63),
+                Color(0xFFFF5722),
+              ],
+            ).createShader(rect);
+          },
+          child: const Text(
+            'KiliKili',
+            style: TextStyle(
+              color: Colors.white,
+              fontSize: 32,
+              fontWeight: FontWeight.bold,
+              letterSpacing: 1,
+            ),
+          ),
+        ),
+      ],
+    );
+  }
+}
+
+class LoginPage extends StatelessWidget {
+  const LoginPage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: SafeArea(
+        child: Center(
+          child: SingleChildScrollView(
+            padding: const EdgeInsets.all(25),
+            child: Column(
+              children: [
+                const SizedBox(height: 50),
+
+                const KiliKiliLogo(
+                  size: 130,
+                ),
+
+                const SizedBox(height: 50),
+
+                TextField(
+                  decoration: InputDecoration(
+                    hintText: 'Email or Username',
+                    prefixIcon: const Icon(Icons.person_outline),
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(12),
+                    ),
+                  ),
+                ),
+
+                const SizedBox(height: 15),
+
+                TextField(
+                  obscureText: true,
+                  decoration: InputDecoration(
+                    hintText: 'Password',
+                    prefixIcon: const Icon(Icons.lock_outline),
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(12),
+                    ),
+                  ),
+                ),
+
+                const
+    
   }
 }
